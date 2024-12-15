@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="register.js" defer></script>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form id="registration-form">
+            <label for="email">Электронная почта *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Пароль *</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <button type="button" id="toggle-password">👁️</button>
+            </div>
+
+            <label for="confirm-password">Подтвердите пароль *</label>
+            <div class="password-container">
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <button type="button" id="toggle-confirm-password">👁️</button>
+            </div>
+
+            <div id="password-strength"></div>
+
+            <label for="fullname">Имя</label>
+            <input type="text" id="fullname" name="fullname">
+
+            <label for="nickname">Никнейм</label>
+            <input type="text" id="nickname" name="nickname">
+
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="gender">Пол</label>
+            <select id="gender" name="gender">
+                <option value="">Выберите</option>
+                <option value="Мужской">Мужской</option>
+                <option value="Женский">Женский</option>
+                <option value="Другой">Другой</option>
+            </select>
+
+            <label for="avatar-url">URL аватара</label>
+            <input type="url" id="avatar-url" name="avatar-url" placeholder="https://example.com/avatar.jpg">
+
+            <button type="button" id="generate-password-btn">Генерировать пароль</button>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+    </div>
+</body>
+</html>

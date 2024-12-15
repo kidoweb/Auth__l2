@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="profile.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Профиль пользователя</h2>
+
+        <div class="profile-info">
+            <p><strong>Электронная почта:</strong> <span id="email">example@example.com</span></p>
+            <p><strong>Дата регистрации:</strong> <span id="registration-date">01.01.2024</span></p>
+            <p><strong>Имя:</strong> <span id="fullname">Иван Иванов</span></p>
+            <p><strong>Никнейм:</strong> <span id="nickname">ivan123</span></p>
+            <p><strong>Телефон:</strong> <span id="phone">+7 900 123 45 67</span></p>
+            <p><strong>Пол:</strong> <span id="gender">Мужской</span></p>
+            <p><strong>Аватар:</strong> <img src="" alt="Аватар" id="avatar" width="100"></p>
+        </div>
+
+        <button id="edit-profile-btn">Изменить профиль</button>
+
+        <div id="edit-form" class="hidden">
+            <h3>Редактировать профиль</h3>
+            <form id="profile-edit-form">
+                <label for="new-fullname">Имя:</label>
+                <input type="text" id="new-fullname" name="new-fullname">
+
+                <label for="new-nickname">Никнейм:</label>
+                <input type="text" id="new-nickname" name="new-nickname">
+
+                <label for="new-password">Новый пароль:</label>
+                <input type="password" id="new-password" name="new-password">
+
+                <label for="confirm-new-password">Подтверждение пароля:</label>
+                <input type="password" id="confirm-new-password" name="confirm-new-password">
+
+                <label for="new-phone">Телефон:</label>
+                <input type="tel" id="new-phone" name="new-phone">
+
+                <label for="new-gender">Пол:</label>
+                <select id="new-gender" name="new-gender">
+                    <option value="">Выберите</option>
+                    <option value="Мужской">Мужской</option>
+                    <option value="Женский">Женский</option>
+                    <option value="Другой">Другой</option>
+                </select>
+
+                <label for="new-avatar-url">URL аватара:</label>
+                <input type="url" id="new-avatar-url" name="new-avatar-url" placeholder="https://example.com/avatar.jpg">
+
+                <button type="button" id="save-changes-btn">Сохранить изменения</button>
+                <button type="button" id="cancel-edit-btn">Отмена</button>
+            </form>
+        </div>
+
+
+        <button id="logout-btn">Выйти</button>
+    </div>
+</body>
+</html>
